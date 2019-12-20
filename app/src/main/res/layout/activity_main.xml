@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:text="Please Upload Image"
+       android:id="@+id/txtUploadImage"
+       android:textSize="24sp"
+       android:textColor="#C70B4B"
+       android:textAllCaps="true"
+       android:textAlignment="center"/>
+ <EditText
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/imgDescription"
+     android:layout_below="@+id/txtUploadImage"
+     android:hint="Enter Image Description here"
+     android:layout_marginTop="10dp"
+     android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chooseImage"
+        android:text="Choose Image to upload"
+        android:textSize="18sp"
+        android:layout_marginTop="20px"
+        android:drawableLeft="@drawable/ic_camera"
+        android:layout_below="@+id/imgDescription"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:id="@+id/imgPreview"
+        android:layout_below="@+id/chooseImage"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/imagepreview"
+        />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/imgPreview"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnUploadImage"
+        android:text="Upload Image"
+        android:textSize="18sp"
+        android:layout_below="@+id/imgPreview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15sp"
+        android:drawableLeft="@drawable/ic_file_upload_black_24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Gallery"
+        android:id="@+id/viewGallery"
+        android:textSize="20sp"
+        android:layout_below="@+id/imgPreview"
+        android:layout_toRightOf="@+id/btnUploadImage"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"/>
+
+</RelativeLayout>
